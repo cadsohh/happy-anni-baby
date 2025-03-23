@@ -55,6 +55,18 @@
     .back-button:hover {
       background-color: #ff99aa;
     }
+
+    /* Floating emoji animation */
+    @keyframes rise {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -71,6 +83,27 @@
   <img src="9.jpg" class="floating-img" style="top: 45%; left: 60%;">
   <img src="10.jpg" class="floating-img" style="top: 35%; left: 30%;">
 
+  <!-- Floating hearts & balloons -->
+  <div id="floaties"></div>
+
   <a href="index.html" class="back-button">Back to Main 💖</a>
+
+  <script>
+    const floaties = document.getElementById("floaties");
+    const emojis = ["🎈", "💖", "💞", "🎀", "💘"];
+
+    setInterval(() => {
+      const floaty = document.createElement("div");
+      floaty.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      floaty.style.position = "absolute";
+      floaty.style.left = Math.random() * 100 + "vw";
+      floaty.style.bottom = "-30px";
+      floaty.style.fontSize = "24px";
+      floaty.style.animation = "rise 6s linear forwards";
+      document.body.appendChild(floaty);
+
+      setTimeout(() => floaty.remove(), 6000);
+    }, 600);
+  </script>
 </body>
 </html>

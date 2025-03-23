@@ -41,6 +41,7 @@ h1 {
 }
 
 button, .link-button {
+  font-family: 'Patrick Hand', cursive;
   background-color: #ffb6c1;
   border: none;
   padding: 10px 20px;
@@ -57,7 +58,7 @@ button:hover, .link-button:hover {
   background-color: #ff99aa;
 }
 
-/* Floating hearts */
+/* Floating hearts (main page only) */
 .heart {
   position: fixed;
   bottom: -30px;
