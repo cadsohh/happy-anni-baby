@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
+/* Force font on everything */
+* {
+  font-family: 'Patrick Hand', cursive !important;
+}
+
 body {
   background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
-  font-family: 'Patrick Hand', cursive;
   color: #d63384;
   display: flex;
   justify-content: center;
@@ -41,7 +45,6 @@ h1 {
 }
 
 button, .link-button {
-  font-family: 'Patrick Hand', cursive;
   background-color: #ffb6c1;
   border: none;
   padding: 10px 20px;
@@ -58,7 +61,7 @@ button:hover, .link-button:hover {
   background-color: #ff99aa;
 }
 
-/* Floating hearts (main page only) */
+/* Floating hearts (for index.html) */
 .heart {
   position: fixed;
   bottom: -30px;

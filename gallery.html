@@ -10,7 +10,6 @@
       margin: 0;
       background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
       overflow: hidden;
-      font-family: 'Patrick Hand', cursive;
     }
 
     .floating-img {
@@ -36,6 +35,24 @@
       }
     }
 
+    .floater {
+      position: absolute;
+      font-size: 24px;
+      animation: rise 6s linear forwards;
+      z-index: 5;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
     .back-button {
       position: fixed;
       bottom: 20px;
@@ -47,25 +64,12 @@
       color: white;
       font-size: 1em;
       text-decoration: none;
-      font-family: 'Patrick Hand', cursive;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
 
     .back-button:hover {
       background-color: #ff99aa;
-    }
-
-    /* Floating emoji animation */
-    @keyframes rise {
-      0% {
-        transform: translateY(0);
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-      }
     }
   </style>
 </head>
@@ -83,7 +87,7 @@
   <img src="9.jpg" class="floating-img" style="top: 45%; left: 60%;">
   <img src="10.jpg" class="floating-img" style="top: 35%; left: 30%;">
 
-  <!-- Floating hearts & balloons -->
+  <!-- Floating emoji hearts and balloons -->
   <div id="floaties"></div>
 
   <a href="index.html" class="back-button">Back to Main 💖</a>
@@ -94,12 +98,10 @@
 
     setInterval(() => {
       const floaty = document.createElement("div");
+      floaty.className = "floater";
       floaty.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      floaty.style.position = "absolute";
       floaty.style.left = Math.random() * 100 + "vw";
       floaty.style.bottom = "-30px";
-      floaty.style.fontSize = "24px";
-      floaty.style.animation = "rise 6s linear forwards";
       document.body.appendChild(floaty);
 
       setTimeout(() => floaty.remove(), 6000);
