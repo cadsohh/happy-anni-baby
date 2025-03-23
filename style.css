@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+  font-family: 'Patrick Hand', cursive;
+  color: #d63384;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: #ff69b4;
+}
+
+.subtext {
+  color: #a05294;
+  font-style: italic;
+  margin-bottom: 30px;
+  font-size: 1em;
+}
+
+#reason {
+  font-size: 1.2em;
+  margin: 30px 0;
+  min-height: 60px;
+  transition: all 0.3s ease;
+}
+
+button, .link-button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+button:hover, .link-button:hover {
+  background-color: #ff99aa;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+  color: #ff69b4;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}

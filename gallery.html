@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Floating Memories ✨</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+      overflow: hidden;
+      font-family: 'Patrick Hand', cursive;
+    }
+
+    .floating-img {
+      position: absolute;
+      width: 150px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: floatRandom 20s infinite ease-in-out;
+    }
+
+    @keyframes floatRandom {
+      0% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-200px) translateX(100px) rotate(10deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0px) translateX(0px) rotate(-5deg);
+        opacity: 0.9;
+      }
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffb6c1;
+      padding: 10px 20px;
+      border-radius: 12px;
+      color: white;
+      font-size: 1em;
+      text-decoration: none;
+      font-family: 'Patrick Hand', cursive;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ff99aa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating images -->
+  <img src="1.jpg" class="floating-img" style="top: 10%; left: 5%;">
+  <img src="2.jpg" class="floating-img" style="top: 20%; left: 40%;">
+  <img src="3.jpg" class="floating-img" style="top: 60%; left: 10%;">
+  <img src="4.jpg" class="floating-img" style="top: 70%; left: 50%;">
+  <img src="5.jpg" class="floating-img" style="top: 30%; left: 70%;">
+  <img src="6.jpg" class="floating-img" style="top: 50%; left: 80%;">
+  <img src="7.jpg" class="floating-img" style="top: 15%; left: 85%;">
+  <img src="8.jpg" class="floating-img" style="top: 75%; left: 20%;">
+  <img src="9.jpg" class="floating-img" style="top: 45%; left: 60%;">
+  <img src="10.jpg" class="floating-img" style="top: 35%; left: 30%;">
+
+  <a href="index.html" class="back-button">Back to Main 💖</a>
+</body>
+</html>
